@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: "Air-Ticket-Management"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      initializationFailTimeout: 30000
+    url: jdbc:mysql://localhost:3306/airticketdb
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hybernate:
+      ddl-auto: create
+      nameing:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    defer-datasource-initialization: true
+    init:
+      mode: always
+  sql:
+    init:
+      mode: always
+
+logging:
+  file:
+    name: airticket-logfile.log
+    max-size: 100MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

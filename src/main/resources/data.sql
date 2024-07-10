@@ -1,0 +1,118 @@
+INSERT INTO Ticket (route, ticket_price, order_date)
+VALUES ('New York to Los Angeles', 299.99, CURRENT_DATE);
+
+-- Insert data with previous date (1 day before the current date)
+INSERT INTO Ticket (route, ticket_price, order_date)
+VALUES ('Chicago to Miami', 199.99, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY));
+
+-- Insert data with a date 7 days before the current date
+INSERT INTO Ticket (route, ticket_price, order_date)
+VALUES ('San Francisco to Seattle', 99.99, DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY));
+
+-- Insert data with a future date (7 days after the current date)
+INSERT INTO Ticket (route, ticket_price, order_date)
+VALUES ('Boston to Washington DC', 149.99, DATE_ADD(CURRENT_DATE, INTERVAL 7 DAY));
+
+INSERT INTO Ticket (route, ticket_price, order_date)
+VALUES
+('San Francisco to Seattle', 99.99, DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)),
+('New York to Los Angeles', 299.99, CURRENT_DATE),
+('Chicago to Miami', 199.99, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)),
+('Boston to Washington DC', 149.99, DATE_ADD(CURRENT_DATE, INTERVAL 7 DAY)),
+('Houston to Dallas', 79.99, DATE_SUB(CURRENT_DATE, INTERVAL 3 DAY)),
+('Phoenix to Denver', 129.99, DATE_SUB(CURRENT_DATE, INTERVAL 5 DAY)),
+('San Diego to Las Vegas', 89.99, CURRENT_DATE),
+('Philadelphia to Atlanta', 179.99, DATE_ADD(CURRENT_DATE, INTERVAL 2 DAY)),
+('San Antonio to Austin', 49.99, DATE_SUB(CURRENT_DATE, INTERVAL 2 DAY)),
+('Dallas to San Francisco', 299.99, DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY)),
+('Los Angeles to New York', 299.99, DATE_SUB(CURRENT_DATE, INTERVAL 10 DAY)),
+('Miami to Chicago', 199.99, DATE_SUB(CURRENT_DATE, INTERVAL 4 DAY)),
+('Washington DC to Boston', 149.99, DATE_ADD(CURRENT_DATE, INTERVAL 6 DAY)),
+('Dallas to Houston', 79.99, DATE_SUB(CURRENT_DATE, INTERVAL 12 DAY)),
+('Denver to Phoenix', 129.99, DATE_SUB(CURRENT_DATE, INTERVAL 15 DAY)),
+('Las Vegas to San Diego', 89.99, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)),
+('Atlanta to Philadelphia', 179.99, DATE_SUB(CURRENT_DATE, INTERVAL 8 DAY)),
+('Austin to San Antonio', 49.99, DATE_ADD(CURRENT_DATE, INTERVAL 5 DAY)),
+('San Francisco to Dallas', 299.99, DATE_ADD(CURRENT_DATE, INTERVAL 9 DAY)),
+('Seattle to San Francisco', 99.99, DATE_SUB(CURRENT_DATE, INTERVAL 20 DAY)),
+('Los Angeles to Miami', 250.00, DATE_ADD(CURRENT_DATE, INTERVAL 14 DAY)),
+('Miami to New York', 220.00, DATE_SUB(CURRENT_DATE, INTERVAL 18 DAY)),
+('Chicago to Los Angeles', 280.00, DATE_ADD(CURRENT_DATE, INTERVAL 11 DAY)),
+('Houston to Atlanta', 200.00, DATE_ADD(CURRENT_DATE, INTERVAL 13 DAY)),
+('Denver to Seattle', 150.00, DATE_SUB(CURRENT_DATE, INTERVAL 16 DAY)),
+('San Diego to Phoenix', 90.00, DATE_ADD(CURRENT_DATE, INTERVAL 19 DAY)),
+('Boston to Chicago', 190.00, DATE_ADD(CURRENT_DATE, INTERVAL 20 DAY)),
+('New York to San Francisco', 330.00, DATE_ADD(CURRENT_DATE, INTERVAL 21 DAY)),
+('Philadelphia to Dallas', 210.00, DATE_SUB(CURRENT_DATE, INTERVAL 22 DAY)),
+('Atlanta to Houston', 170.00, DATE_ADD(CURRENT_DATE, INTERVAL 23 DAY)),
+('San Antonio to Miami', 140.00, DATE_SUB(CURRENT_DATE, INTERVAL 24 DAY)),
+('Dallas to New York', 310.00, DATE_ADD(CURRENT_DATE, INTERVAL 25 DAY)),
+('Phoenix to Chicago', 180.00, DATE_SUB(CURRENT_DATE, INTERVAL 26 DAY)),
+('Las Vegas to Atlanta', 160.00, DATE_ADD(CURRENT_DATE, INTERVAL 27 DAY)),
+('Austin to Boston', 250.00, DATE_ADD(CURRENT_DATE, INTERVAL 28 DAY)),
+('San Francisco to Houston', 300.00, DATE_SUB(CURRENT_DATE, INTERVAL 29 DAY)),
+('Seattle to New York', 350.00, DATE_ADD(CURRENT_DATE, INTERVAL 30 DAY)),
+('Miami to San Francisco', 320.00, DATE_ADD(CURRENT_DATE, INTERVAL 31 DAY)),
+('New York to Denver', 270.00, DATE_SUB(CURRENT_DATE, INTERVAL 32 DAY)),
+('Chicago to Boston', 260.00, DATE_ADD(CURRENT_DATE, INTERVAL 33 DAY)),
+('Houston to Los Angeles', 290.00, DATE_ADD(CURRENT_DATE, INTERVAL 34 DAY)),
+('Denver to Dallas', 170.00, DATE_SUB(CURRENT_DATE, INTERVAL 35 DAY)),
+('San Diego to Chicago', 220.00, DATE_ADD(CURRENT_DATE, INTERVAL 36 DAY)),
+('Boston to Phoenix', 200.00, DATE_ADD(CURRENT_DATE, INTERVAL 37 DAY)),
+('Los Angeles to Atlanta', 310.00, DATE_SUB(CURRENT_DATE, INTERVAL 38 DAY)),
+('Philadelphia to San Francisco', 280.00, DATE_ADD(CURRENT_DATE, INTERVAL 39 DAY)),
+('Atlanta to San Diego', 270.00, DATE_ADD(CURRENT_DATE, INTERVAL 40 DAY)),
+('Austin to New York', 290.00, DATE_SUB(CURRENT_DATE, INTERVAL 41 DAY));
+
+
+
+INSERT INTO Food (food_name, unit_price, quantity, net_price, order_date) VALUES
+('Apple', 1.50, 10, 3.00, CURRENT_DATE),
+('Banana', 0.75, 20, 1.50, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)),
+('Orange', 1.25, 15, 2.50, DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY)),
+('Mango', 2.00, 5, 4.00, DATE_SUB(CURRENT_DATE, INTERVAL 2 DAY)),
+('Grapes', 3.00, 8, 6.00, DATE_ADD(CURRENT_DATE, INTERVAL 5 DAY)),
+('Pineapple', 2.50, 6, 5.00, CURRENT_DATE),
+('Strawberry', 4.00, 12, 8.00, DATE_ADD(CURRENT_DATE, INTERVAL 7 DAY)),
+('Blueberry', 3.50, 10, 7.00, DATE_SUB(CURRENT_DATE, INTERVAL 4 DAY)),
+('Raspberry', 5.00, 7, 10.00, DATE_ADD(CURRENT_DATE, INTERVAL 2 DAY)),
+('Blackberry', 4.50, 8, 9.00, DATE_SUB(CURRENT_DATE, INTERVAL 6 DAY)),
+('Cherry', 6.00, 15, 12.00, CURRENT_DATE),
+('Peach', 1.75, 10, 3.50, DATE_ADD(CURRENT_DATE, INTERVAL 4 DAY)),
+('Plum', 2.25, 12, 4.50, DATE_SUB(CURRENT_DATE, INTERVAL 3 DAY)),
+('Apricot', 2.75, 5, 5.50, DATE_ADD(CURRENT_DATE, INTERVAL 6 DAY)),
+('Avocado', 2.00, 9, 4.00, DATE_SUB(CURRENT_DATE, INTERVAL 5 DAY)),
+('Kiwi', 1.50, 20, 3.00, DATE_ADD(CURRENT_DATE, INTERVAL 1 DAY)),
+('Papaya', 3.00, 7, 6.00, DATE_SUB(CURRENT_DATE, INTERVAL 2 DAY)),
+('Watermelon', 0.60, 30, 1.20, DATE_ADD(CURRENT_DATE, INTERVAL 8 DAY)),
+('Melon', 1.20, 18, 2.40, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)),
+('Pomegranate', 4.00, 6, 8.00, CURRENT_DATE),
+('Pear', 1.30, 10, 2.60, DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY)),
+('Lemon', 0.50, 25, 1.00, DATE_SUB(CURRENT_DATE, INTERVAL 4 DAY)),
+('Lime', 0.55, 22, 1.10, DATE_ADD(CURRENT_DATE, INTERVAL 5 DAY)),
+('Coconut', 2.50, 8, 5.00, DATE_SUB(CURRENT_DATE, INTERVAL 3 DAY)),
+('Fig', 3.75, 12, 7.50, DATE_ADD(CURRENT_DATE, INTERVAL 7 DAY)),
+('Date', 5.50, 20, 11.00, DATE_SUB(CURRENT_DATE, INTERVAL 6 DAY)),
+('Guava', 2.20, 14, 4.40, DATE_ADD(CURRENT_DATE, INTERVAL 2 DAY)),
+('Lychee', 3.30, 9, 6.60, DATE_SUB(CURRENT_DATE, INTERVAL 5 DAY)),
+('Passion Fruit', 4.40, 8, 8.80, DATE_ADD(CURRENT_DATE, INTERVAL 4 DAY)),
+('Dragon Fruit', 5.60, 5, 11.20, DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)),
+('Jackfruit', 1.75, 10, 3.50, CURRENT_DATE),
+('Starfruit', 2.10, 6, 4.20, DATE_ADD(CURRENT_DATE, INTERVAL 8 DAY)),
+('Durian', 6.00, 3, 12.00, DATE_SUB(CURRENT_DATE, INTERVAL 2 DAY)),
+('Mangosteen', 4.50, 7, 9.00, DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY)),
+('Rambutan', 3.20, 12, 6.40, DATE_SUB(CURRENT_DATE, INTERVAL 6 DAY)),
+('Custard Apple', 2.80, 8, 5.60, DATE_ADD(CURRENT_DATE, INTERVAL 7 DAY)),
+('Persimmon', 3.75, 9, 7.50, DATE_SUB(CURRENT_DATE, INTERVAL 4 DAY)),
+('Sapodilla', 2.90, 10, 5.80, DATE_ADD(CURRENT_DATE, INTERVAL 5 DAY)),
+('Tamarind', 1.60, 20, 3.20, CURRENT_DATE),
+('Pomelo', 3.00, 15, 6.00, DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY)),
+('Quince', 2.50, 7, 5.00, DATE_ADD(CURRENT_DATE, INTERVAL 2 DAY)),
+('Jujube', 3.10, 6, 6.20, DATE_SUB(CURRENT_DATE, INTERVAL 5 DAY)),
+('Mulberry', 2.20, 12, 4.40, DATE_ADD(CURRENT_DATE, INTERVAL 3 DAY)),
+('Boysenberry', 4.00, 8, 8.00, DATE_SUB(CURRENT_DATE, INTERVAL 4 DAY)),
+('Elderberry', 5.50, 5, 11.00, DATE_ADD(CURRENT_DATE, INTERVAL 6 DAY)),
+('Gooseberry', 2.75, 15, 5.50, DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY)),
+('Huckleberry', 3.50, 10, 7.00, DATE_ADD(CURRENT_DATE, INTERVAL 8 DAY)),
+('Cloudberry', 6.00, 4, 12.00, DATE_SUB(CURRENT_DATE, INTERVAL 2 DAY));
+
